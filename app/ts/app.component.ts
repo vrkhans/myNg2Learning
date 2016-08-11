@@ -9,11 +9,15 @@ import {Pair}from './Pair';
                 <child-one data = "data sent to public property"></child-one>
                 <hr>
                 
-                <pair *ngFor="let mypair of pairs" [nameValue]="mypair"></pair>
+                <pair 
+                    *ngFor="let mypair of pairs" 
+                        [nameValue]="mypair">
+                </pair>
               `,
     directives: [ChildOneComponent,PairComponent]
 })
 export class AppComponent { 
+
 pairs: Pair[];
     constructor() {
         this.pairs = [
